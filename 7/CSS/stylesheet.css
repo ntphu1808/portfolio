@@ -1,0 +1,66 @@
+/* This is the layout segment =========================================================== */
+body, html {
+    text-align: center;
+    font-family: "Lato", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    height: 100%;
+}
+.parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    display: grid;
+    grid-template-columns: auto;
+    grid-row: 100%;
+    align-content: center;
+    justify-content: center;
+    opacity: 0.75; /* The opacity property sets the opacity level for a whole document */
+}
+#pic1, #pic4 {
+    background-image: url("https://jolly-kalam-23776e.netlify.app/parallaxsite/img/image1.jpg");
+}
+#pic2 {
+    background-image: url("https://jolly-kalam-23776e.netlify.app/parallaxsite/img/image2.jpg");
+    height: 50%;
+}
+#pic3 {
+    background-image: url("https://jolly-kalam-23776e.netlify.app/parallaxsite/img/image3.jpg");
+    height: 50%;
+}
+/*=======================================================================================*/
+
+
+
+.centerHeader {
+    background-color: black;
+    color: white;
+    padding: 15px 25px;
+    font-weight: normal;
+    font-size: 30px;
+    letter-spacing: 5px;   /* spacing between each letter */
+    word-spacing: 6px;      /* spacing between each word */
+}
+#pic2 > h1, #pic3 >h1  {
+    color: white;
+    letter-spacing: 5px;
+    word-spacing: 8px;
+    font-weight: normal;
+}
+section {
+    padding: 40px 60px;
+}
+#lightSection, .darkSection {
+    line-height: 1.7;
+}
+#lightSection {
+    background-color: #f4f4f4;
+    color: #666;
+}
+.darkSection {
+    background-color: #282e34;
+    color: #ddd;
+}
+

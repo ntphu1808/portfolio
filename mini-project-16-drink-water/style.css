@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+:root {
+    --background-color: #3494e4;
+    --border-color: #144fc6;
+    --fill-color: #6ab3f8;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    display: grid;
+    text-align: center;
+    align-content: center;
+    height: 100vh;
+    background-color: var(--background-color);
+}
+* {
+    box-sizing: border-box;
+}
+/*===================Structure=========================== */ 
+
+.big-cup {
+    width: 150px;
+    height: 330px;
+    margin: 0 auto;
+    border-radius: 0 0 40px 40px;
+    overflow-y: hidden;
+}
+.small-cup {
+    width: 50px;
+    height: 80px;
+    border-radius: 0 0 15px 15px;
+}
+.cup-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 0 auto;
+    width: fit-content;
+    gap: 10px;
+}
+.water {
+    height: 0;
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.label {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    margin: 0;
+}
+/*==================Skin===================================== */
+.cup {
+    background-color: white;
+    border: var(--border-color) 4px solid;
+    color: var(--border-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.small-cup {
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+.title, p {
+    color: white;
+}
+.liters-remained, .small-cup {
+    color: var(--border-color);
+}
+.liters-remained {
+    margin: 0;
+    font-size: 1.5rem;
+}
+.small-cup.filled {
+    background-color: var(--fill-color);
+    color: white;
+}
+.water {
+    background-color: var(--fill-color);
+    border-radius: 0 0 36px 36px;
+    transition: height 0.3s linear;
+    font-size: 1.5rem;
+    font-weight: 600;
+}

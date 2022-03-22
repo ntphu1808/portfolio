@@ -1,0 +1,3 @@
+we should set width and height of the content element (child element)
+For instance, we have a div.avatar-container and a child img.avatar__img
+we should set the width and height of the img.avatar__img.

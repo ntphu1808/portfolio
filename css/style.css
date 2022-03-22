@@ -1,0 +1,37 @@
+@media only screen and (min-width: 1000px) {
+    .custom-width {
+        width: 300px;
+    }
+}
+body::before {
+    display:block;
+    content: "";
+    height: 72px;
+}
+.custom-hr {
+    border: 2px solid white;
+}
+
+@media only screen and (min-width: 768px) {
+    footer a {
+        display: inline-block;
+        transition: transform 0.4s ease;
+    }
+    footer a:hover {
+        transform: translateY(30%);
+    }
+}
+.card-img-top {
+    height: 30vh;
+    object-fit: cover;
+    border: 0;
+}
+.card i {
+    opacity: 0;
+    transition: all 0.4s ease-out;
+}
+
+.card > a:hover > i.fas {
+    opacity: 1;
+    transition: all 0.4s ease-in;
+}

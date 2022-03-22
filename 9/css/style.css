@@ -1,0 +1,224 @@
+* {
+    margin: 0;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1em;
+    line-height: 1.5;
+    box-sizing: border-box;
+    text-align: center;
+}
+img {
+    width: 100%;
+}
+a {
+    color: #2690d4;
+    text-decoration: none;
+}
+/*=======================================image background section================================== */
+#article-dark {
+    display: grid;
+    grid-template-columns: [image-start] 1fr minmax(auto, 880px) 1fr [image-end];
+    grid-template-rows: [image-start] 30vh 15vh 15vh [image-end];
+    grid-template-areas: 'leftSpace article rightSpace'
+                            'leftSpace paragraph rightSpace'
+                            'leftSpace link rightSpace';
+    align-items: end;
+    color: white;
+    row-gap: 5px;
+    background-color: #333;
+}
+#article-dark > img {
+    grid-area: image;
+    z-index: 0;
+    object-fit: cover;
+    align-self: stretch;
+    opacity: 0.4;
+}
+#article-dark > h1 {
+    grid-area: article;
+    padding: 0 2.5vw;
+    z-index: 1;
+}
+#article-dark > p {
+    grid-area: paragraph;
+    align-self: center;
+    z-index: 1;
+}
+#article-dark > a {
+    grid-area: link;
+    align-self: start;
+    border: white 1px solid;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 15px 35px;
+    color: white;
+    text-decoration: none;
+    background-color: #333;
+    z-index: 1;
+}
+
+/*==================================================================================*/
+
+/*==============================Web & Application Development section================ */
+#article-light {
+    display: grid;
+    grid-template-columns: 1fr minmax(auto, 880px) 1fr;
+    grid-template-areas: '... article2 ....'
+                        '... content1 ....';
+    grid-template-rows: 10vh auto;
+}
+#article-light > h2 {
+    grid-area: article2;
+    align-self: end;
+}
+#article-light > div {
+    grid-area: content1;
+    padding: 3vh 2vw 5vh 2vw;
+    align-self: center;
+} 
+/* =======================================================================================*/
+
+/*================================Three small pictures section==============================*/
+
+#ImagesContainer {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    row-gap: 2.5vh;
+    padding: 4.5vh 2.5vh;
+    background-color: #333;
+}
+.imageItems {
+    background-color: white;
+    display: grid;
+    grid-template-rows: 2.5fr 1fr 1fr;
+}
+.imageItems > h2 {
+    align-self: center;
+}
+.imageItems > p {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+/*==========================================================================================*/
+
+/*======================================Footer Section======================================*/
+#footerContainer {
+    display: grid;
+    color: white;
+    grid-template-rows: 2.5fr 3fr 3fr 1fr;
+}
+.footerItems {
+    padding: 3vh 2.5vh;
+    display: grid;
+    grid-template-rows: 1.5fr 2fr;
+    align-items: center;
+}
+.footerItems > p, .footerItems > h2{
+    padding: 0 20px;
+}
+.footerItems > p {
+    align-self: start;
+}
+#whiteFooter {
+    color: black;
+    grid-template-rows: 1fr 0.6fr;
+}
+#blueFooter {
+    background-color: #2690d4;
+}
+#darkFooter {
+    background-color: #333;
+}
+#blackFooter {
+    background-color: black;
+    padding: 0;
+    display: grid;
+}
+#leftSide {
+    align-self: end;
+}
+#rightSide {
+    align-self: start;
+}
+
+/*=============================================================================================================================*/
+
+@media only screen and (min-width: 628px) {    /* Alter the position of the content inside of the background image section */
+    #article-dark {
+        grid-template-rows: [image-start] 20vh 15vh 25vh [image-end];
+    }
+    #article-dark > p {
+        padding: 0 2vw;
+    }
+}
+
+/*===========================================When the browser is greater than 700px then apply these selector style=========================*/
+@media only screen and (min-width: 700px) {
+/*==============Split the paragraph inside of the Article-Light ID into 2 columns =============================*/
+    #columnParagraph {
+        columns: 2;
+        column-gap: 5vw;
+    }
+/*===========================================================================================================*/
+
+/*===========================================Adjust the pictures' position of the image container to be in the same row======================*/
+    #ImagesContainer {
+        display: grid;
+        grid-template-columns: 1fr repeat(3, minmax(auto, 280px)) 1fr;
+        grid-template-rows: none;
+        column-gap: 2.5vh;
+        background-color: #333;
+    }
+    .imageItems {
+        background-color: white;
+        display: grid;
+        grid-template-rows: 1fr 0.5fr 1.3fr;
+    }
+    .imageItems > p {
+        align-self: center;
+    }
+    .imageItems:nth-child(1) {
+        grid-column: 2;
+    }
+    .imageItems:nth-child(2) {
+        grid-column: 3;
+    }
+    .imageItems:nth-child(3) {
+        grid-column: 4;
+    }
+/*===============================================================================================================*/
+
+
+/*===========================================Change the position of the color blocks in the footerSection========================*/
+    #footerContainer {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 4fr 4.5fr 1fr;
+    }
+    #whiteFooter {
+        grid-column: span 2;
+        display: grid;
+        grid-template-columns: 1fr minmax(auto, 922px) 1fr;
+    }
+    #whiteFooter > p {
+        grid-column: 2;
+        grid-row: 2;
+    }
+    #whiteFooter > h2 {
+        grid-column: 2;
+    }
+    #blackFooter {
+        grid-column: span 2;
+        display: grid;
+        grid-template-columns: 2vw 1fr 1fr 2vw;
+        grid-template-rows: 1fr;
+    }
+    #leftSide {
+        grid-column: 2;
+        align-self: center;
+    }
+    #rightSide {
+        grid-column: 3;
+        align-self: center;
+    }
+}

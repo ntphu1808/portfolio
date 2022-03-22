@@ -1,0 +1,75 @@
+body, html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    height: 100%;
+    color: #926239;
+}
+
+/*==============================The First container===================================== */
+#container {
+    display: grid;
+    background-image: url('http://traversymedia.com/downloads/assets/beachshowcase.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    align-content: center;
+    text-align: center;
+    font-size: larger;
+}
+h1 {
+    font-size: 50px;
+    margin: inherit;
+}
+#container p {
+    margin-top: 5px;
+}
+a {
+    border: #926239 1px solid;
+    padding: 15px 25px;
+    line-height: 50px;
+    border-radius: 10px;
+    color: #926239;
+    text-decoration: none;
+}
+a:hover {
+    background-color: #926239;
+    color: white;
+}
+/*=========================================================================================== */
+
+
+
+/*================================The second container======================================= */
+
+#container2 {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    height: 50%;
+    font-size: 17px;
+    line-height: 1.6;     /* specifies the space between each line of a paragraph */
+    text-align: center;
+}
+#container2 p {
+    margin: 0;
+}
+#firstRow {
+    grid-area: 1 / 1 / span 1 / span 3;
+    padding: 15px;
+}
+#secondRow {
+    grid-area: 2 / 1 / span 1 / span 3;
+    padding: 15px;
+    
+}
+.lastRow {
+    text-align: left;
+    padding: 15px 0 15px 17px;
+}
+.brownCell {
+    background-color: #926239;
+    color: white;
+}
+/*======================================================================================================= */

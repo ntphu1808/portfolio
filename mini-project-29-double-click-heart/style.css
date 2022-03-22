@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    display: grid;
+    text-align: center;
+    justify-content: center;
+    height: 100vh;
+}
+* {
+    box-sizing: border-box;
+}
+img {
+    width: 100%;
+    display: block; /*because image is an inline element, 
+    so it won't fit with the height inside the div container, 
+    change it to block to fix the problem */
+}
+
+.header {
+    font-size: 1.1rem;
+    margin: 20px 0 0 0;
+}
+.fa-heart {
+    color: red;
+}
+.img {
+    margin-top: 20px;
+    width: 300px;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0px 0px 16px 3px rgba(0,0,0,0.54);
+}
+.custom-effect {
+    position: absolute;
+    transform: translate(-50%, -50%) scale(0);
+    animation: grow 0.5s linear;
+}
+
+@keyframes grow {
+    to {
+        transform: translate(-50%, -50%) scale(10);
+        opacity: 0;
+    }
+}
+    

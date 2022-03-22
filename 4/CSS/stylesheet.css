@@ -1,0 +1,73 @@
+body {
+    background-color: lightgoldenrodyellow;
+    font-family: 'Anaheim';
+    font-size: 1.2em;
+}
+section {
+    background-color: white;
+    margin: 2% 10% 5% 10%;
+    border-radius: 20px;
+    border: 1px solid #CCC;
+}
+fieldset {
+    margin: auto 20px 10px 20px;
+    border-radius: 2px;
+    border: 1px solid #CCC;
+}
+legend {
+    font-weight: bold;
+}
+p {
+    margin-left: 15px;
+}
+#personalDetails > input {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+#gender {
+    display: block;
+    margin-top: 5px;
+}
+#checkApply {
+    display: block;
+}
+#firstLabel {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+#secondLabel {
+    display:block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+.lastLabel {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+input.lastLabel {
+    margin-left: 10px;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    border: 0;
+    border-radius: 2px;
+    font-size: large;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+#send {
+    display: block;
+    margin: 30px auto 30px auto;
+    font-size: larger;
+    background-color: red;
+    border-radius: 2px;
+    border: 0;
+    color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+h1 {
+    text-align: center;
+    
+}

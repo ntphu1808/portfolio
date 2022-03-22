@@ -1,0 +1,219 @@
+body, html {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.1em;
+    box-sizing: border-box;
+    margin: 0;
+    text-align: center;
+    color: white;
+    overflow-x: hidden;
+    padding: 0;
+}
+* {
+    box-sizing: inherit;
+    margin: 0;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+img {
+    width: 100%;
+}
+:root {
+    --main-white: #f0f0f0;
+    --main-red: #be3144;
+    --main-blue: #45567d;
+    --main-gray: #303841;
+}
+.navBar {
+    display: grid;
+    grid-template-columns: 1fr repeat(3, minmax(auto, 100px)) 30px;
+    grid-auto-flow: row;
+    grid-template-rows: 10vh;
+    background-color: var(--main-red);
+    align-items: center;
+    text-align: center;
+    color: var(--main-white);
+    position: fixed;
+    width: 100%;
+}
+.navBar > a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.4rem;
+    display: grid;
+    height: 10vh;
+    align-items: center;   
+}
+.navBar > a:hover {
+    background-color: var(--main-blue);
+}
+.navBar > a:nth-child(1) {
+    grid-column: 2;
+}
+.title {
+    background-color: var(--main-gray);
+    display: grid;
+    grid-template-rows: 100vh;
+    align-items: center;
+    text-align: center;
+    font-size: 1.6rem;
+}
+.title span {
+    font-size: 1.8rem;
+    color: var(--main-red);
+    font-style: italic;
+}
+main {
+    background-color: var(--main-blue);
+}
+.projectContainer {
+    display: grid;
+    padding: 10vh 20px 10vh 20px;
+    gap: 40px;
+    max-width: 1300px;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+}
+#left {
+    display: none;
+}
+#right {
+    display: none;
+}
+.projectContainer > h2 {
+    font-size: 2.5rem;
+}
+.projectContainer hr {
+    border: 0;
+    border-bottom: 2px solid white;
+    padding-top: 10px;
+}
+.projectContainer > a {
+    transition: all 0.4s ease;
+}
+.projectContainer > a:hover {
+    background-color: var(--main-red);
+    transition: all 0.4s ease;
+}
+.projectContainer > a:hover > i {
+    transform: translateX(20%);
+}
+.projects {
+    display: grid;
+    align-items: center;
+    grid-template-rows: minmax(35vh, 1fr) 10vh;
+    background-color: var(--main-gray);
+    cursor: pointer;
+}
+.projects > p > span {
+    color: var(--main-gray);
+    transition: color 0.3s ease-out;
+    font-size: 0.8rem;
+}
+.projects:hover > p > span {
+    color: #ff7f50;
+    transition: color 0.3s ease-out;
+}
+.projects > img {
+    align-self: stretch;
+    object-fit: fill;
+}
+.projectContainer > a {
+    text-decoration: none;
+    background-color: var(--main-gray);
+    color: inherit;
+    margin: 0 auto;
+    padding: 15px 20px;
+}
+
+
+footer {
+    background-color: var(--main-gray);
+    color: white;
+}
+
+.contact {
+    padding-left: 5vw;
+    padding-right: 5vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 6vh 1fr;
+    gap: 5px
+}
+
+.contact > h2 {
+    align-self: end;
+    font-size: 3.5rem;
+    
+}
+.contact > p {
+    font-size: 1.1rem;
+    font-style: italic;
+    
+}
+#contactLink {
+    line-height: 1.8;
+}
+#contactLink > a {
+    margin-right: 15px;
+    margin-left: 15px;
+    font-size: 1.4rem;
+}
+i {
+    transition: all 0.3s ease;
+}
+#contactLink > a:hover > i {
+    transform: translateY(25%);
+    transition: all 0.3s ease;
+}
+footer > hr {
+    border: 0;
+    border-top: 6px var(--main-red) solid;
+}
+.copyright {
+    display: grid;
+    grid-template-columns: 5fr 3fr;
+    text-align: left;
+    align-items: start;
+    column-gap: 3vw;
+    padding: 2vw;
+    font-size: 1.1rem;
+}
+
+@media only screen and (min-width: 700px) {
+    .projectContainer {
+        grid-template-columns: 1fr 1fr;
+    }
+    .projectContainer > h2 {
+        grid-column: span 2;
+    }
+    .projectContainer > a {
+        grid-column: span 2;
+        
+    }
+    .projectContainer > h2 > hr {
+        width: 640px;
+        margin: 0 auto;
+    }
+    #contactLink {
+        padding: 0 15vw;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .projectContainer {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .projectContainer > h2 {
+        grid-column: span 3;
+    }
+    .projectContainer > a {
+        grid-column: span 3;
+    }
+    .copyright {
+        grid-template-rows: repeat(3, 20px);
+        align-items: start;
+    }   
+}
